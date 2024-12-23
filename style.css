@@ -33,7 +33,6 @@ body .msg-cont .msg {
     gap: 15px;
     padding: 25px;
     border-radius: 10px;
-    background-color: white;
     box-shadow: 10px 10px 20px hsl(210deg 33% 89.89%);
 }
 
