@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Barlow Semi Condensed", serif;
+    font-size: 13px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .msg-cont {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "one one two three"
+        "four five five three";
+    gap: 20px;
+}
+
+body .msg-cont .msg {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+body .msg-cont .msg .avatar-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+body .msg-cont .msg .avatar-info img {
+    width: 32px;
+    border-radius: 16px;
+}
+
+body .msg-cont .msg .avatar-info .txt .name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+body .msg-cont .first {
+    grid-area: one;
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+
+body .msg-cont .first .avatar-info img {
+    border: 2px solid rgb(151, 105, 225);
+}
+
+body .msg-cont .second {
+    grid-area: two;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+body .msg-cont .third {
+    grid-area: three;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+body .msg-cont .fourth {
+    grid-area: four;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+body .msg-cont .fifth {
+    grid-area: five;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+body .msg-cont .fifth .avatar-info img {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+body .msg-cont .msg .avatar-info .txt .graduate {
+    opacity: 0.5;
+}
+
+body .msg-cont .msg .content {
+    opacity: 0.7;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+@media (max-width: 64.375rem) {
+    body {
+        padding: 50px 0px;
+    }
+
+    body .msg-cont {
+        width: 750px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "one one two"
+            "four five five"
+            "three three three";
+    }
+}
+
+@media (max-width: 50rem) {
+    body {
+        padding: 50px 20px;
+    }
+
+    body .msg-cont {
+        max-width: 500px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "one"
+            "two"
+            "four"
+            "five"
+            "three";
+    }
+}
