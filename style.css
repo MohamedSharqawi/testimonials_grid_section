@@ -34,6 +34,7 @@ body .msg-cont .msg {
     padding: 25px;
     border-radius: 10px;
     background-color: white;
+    box-shadow: 10px 10px 20px hsl(210deg 33% 89.89%);
 }
 
 body .msg-cont .msg .avatar-info {
@@ -56,6 +57,16 @@ body .msg-cont .first {
     grid-area: one;
     background-color: hsl(263, 55%, 52%);
     color: hsl(0, 0%, 100%);
+    position: relative;
+}
+
+body .msg-cont .first::after {
+    content: url(images/bg-pattern-quotation.svg);
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    z-index: 2;
 }
 
 body .msg-cont .first .avatar-info img {
@@ -100,6 +111,7 @@ body .msg-cont .msg .content {
 
 h2 {
     font-weight: 600;
+    z-index: 5;
 }
 
 @media (max-width: 64.375rem) {
